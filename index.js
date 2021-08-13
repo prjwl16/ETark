@@ -24,7 +24,7 @@ app.get("/",(req,res)=>{
 
 //routes
 const authRoute = require("./routes/authRoute")
-app.use("/",authRoute)
+app.use("/api",authRoute)
 
 //server
 const port = process.env.port || 5000
