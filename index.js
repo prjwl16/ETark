@@ -24,10 +24,8 @@ app.get("/",(req,res)=>{
 
 //routes
 const authRoute = require("./routes/authRoute")
-app.use("/api",authRoute)
+app.use("/",authRoute)
 
 //server
 const port = process.env.port || 5000
-app.listen(port,()=>{
-    console.log(`listing on ${port}`)
-})
+app.listen(port,()=>{})
