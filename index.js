@@ -18,6 +18,10 @@ mongoose.connect(process.env.DATABASE,{
     console.log("DB CONNECTED")
 })
 
+app.get("/",(req,res)=>{
+    res.send("hii")
+})
+
 //routes
 const authRoute = require("./routes/authRoute")
 app.use("/api",authRoute)
