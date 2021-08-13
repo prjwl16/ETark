@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(coockieParser());
 
 //databse connection
-mongoose.connect(process.env.DATABASE,{
+mongoose.connect("mongodb+srv://user:pass@cluster0.kshzx.mongodb.net/etark?retryWrites=true&w=majority",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
