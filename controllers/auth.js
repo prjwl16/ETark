@@ -47,7 +47,7 @@ exports.signin=(req,res)=>{
                 error:"User Not Found"
             })
         }
-        const token = jwt.sign({_id:user._id},"secretkeyforwebtoken",{ expiresIn: 60 * 60 * 60 })
+        const token = jwt.sign({_id:user._id},process.env.SECRET,{ expiresIn: 60 * 60 * 60 })
         res.cookie("token",token)
 
         return res.status(200).json({
@@ -65,8 +65,8 @@ exports.signout=(req,res)=>{
     })   
 }
 
-// exports.isSignedIn=expressJwt({
-//     secret:"secretkeyforwebtoken",
-//     algorithms: ['HS256'],
-//     userProperty:"auth"
-// })
+exports.isSignedIn=expressJwt({
+    secret:process.env.SECRET,
+    algorithms: ['HS256'],
+    userProperty:"auth"
+})

@@ -2,7 +2,7 @@ require('dotenv').config() //environment variable
 const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
-const coockieParser = require('cookie-Parser')
+const coockieParser = require('cookie-parser')
 
 
 //middlewares
@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(coockieParser());
 
 //databse connection
-mongoose.connect("mongodb+srv://user:pass@cluster0.kshzx.mongodb.net/etark?retryWrites=true&w=majority",{
+mongoose.connect(process.env.DATABASE,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
