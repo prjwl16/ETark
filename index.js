@@ -28,4 +28,4 @@ app.use("/api",authRoute)
 
 //server
 const port = process.env.port || 5000
-app.listen(port,()=>{})
+app.listen(port,()=>{console.log(`Online on ${port}`)})

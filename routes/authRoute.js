@@ -13,9 +13,9 @@ router.post("/login",[
 
 router.get("/signout",signout)
 
-router.get("/home",isSignedIn,(req,res)=>{
-    res.send("Success")
-})
+// router.get("/home",isSignedIn,(req,res)=>{
+//     res.send("Success")
+// })
 
 
 module.exports = router

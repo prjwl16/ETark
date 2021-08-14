@@ -65,8 +65,8 @@ exports.signout=(req,res)=>{
     })   
 }
 
-exports.isSignedIn=expressJwt({
-    secret:"secretkeyforwebtoken",
-    algorithms: ['HS256'],
-    userProperty:"auth"
-})
+// exports.isSignedIn=expressJwt({
+//     secret:"secretkeyforwebtoken",
+//     algorithms: ['HS256'],
+//     userProperty:"auth"
+// })
