@@ -14,6 +14,8 @@ mongoose.connect("mongodb+srv://user:pass@cluster0.kshzx.mongodb.net/etark?retry
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
+}).then(() => {
+    console.log("DB CONNECTED")
 })
 
 app.get("/",(req,res)=>{
